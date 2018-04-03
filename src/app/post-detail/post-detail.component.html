@@ -1,3 +1,15 @@
 <p>
-  post-detail works!
+  Post Detail
 </p>
+<p>User: {{ post?.user?.name }}</p>
+<p>Title: {{ post?.title }}</p>
+<p>Body: {{ post?.body }}</p>
+<div>Comments:
+  <ul>
+    <li *ngFor="let comment of post?.comments">
+      <p>Email: {{ comment.email }}</p>
+      <p>Name: {{ comment.name }}</p>
+      <p>Body: {{ comment.body }}</p>
+    </li>
+  </ul>
+</div>
