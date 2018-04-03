@@ -8,7 +8,7 @@ import { UserService } from '../user.service';
 })
 export class UserListComponent implements OnInit {
 
-  constructor(private userApi: UserService) { 
+  constructor(public userApi: UserService) { 
     this.getUserList();
   }
 
