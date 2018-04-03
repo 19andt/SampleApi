@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { Routes, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -11,6 +14,24 @@ import { UserService } from './user.service';
 import { PostService } from './post.service';
 import { CommentService } from './comment.service';
 
+const appRoutes: Routes = [
+  {
+    path: 'user',
+    component: UserListComponent
+  },
+  {
+    path: 'user/:id',
+    component: UserDetailComponent
+  },
+  {
+    path: 'post',
+    component: PostListComponent
+  },
+  {
+    path: 'post/:id',
+    component: PostDetailComponent
+  }
+]
 
 @NgModule({
   declarations: [
@@ -21,7 +42,15 @@ import { CommentService } from './comment.service';
     PostDetailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule,
+    RouterModule.forRoot(
+      appRoutes,
+      {
+        enableTracing: true
+      }
+    ),
+    FormsModule
   ],
   providers: [
     UserService,
