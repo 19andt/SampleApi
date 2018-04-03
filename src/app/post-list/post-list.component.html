@@ -1,3 +1,8 @@
 <p>
-  post-list works!
+  Posts
 </p>
+<ul>
+  <li *ngFor="let post of postApi.results">
+    <a routerLink="/post/{{ post.id }}">{{ post.title }}</a>
+  </li>
+</ul>

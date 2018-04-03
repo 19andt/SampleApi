@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-post-list',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private postApi: PostService) {
+    this.getPostList();
+   }
 
   ngOnInit() {
+  }
+
+  getPostList(){
+    this.postApi.getList();
   }
 
 }
