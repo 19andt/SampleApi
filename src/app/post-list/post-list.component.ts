@@ -8,7 +8,7 @@ import { PostService } from '../post.service';
 })
 export class PostListComponent implements OnInit {
 
-  constructor(private postApi: PostService) {
+  constructor(public postApi: PostService) {
     this.getPostList();
    }
 
