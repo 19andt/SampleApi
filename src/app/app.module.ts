@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { PostListComponent } from './post-list/post-list.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { PostListComponent } from './post-list/post-list.component';
     AppComponent,
     UserListComponent,
     UserDetailComponent,
-    PostListComponent
+    PostListComponent,
+    PostDetailComponent
   ],
   imports: [
     BrowserModule
